@@ -1,3 +1,14 @@
+# YubiKey Sudo Setup
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Bash](https://img.shields.io/badge/Bash-4.0+-green.svg)](https://www.gnu.org/software/bash/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-orange.svg)](https://ubuntu.com/)
+[![YubiKey](https://img.shields.io/badge/YubiKey-FIDO2%2FU2F-blue.svg)](https://www.yubico.com/)
+
+A robust, production-ready Bash script for configuring Ubuntu 24.04 (Noble) to use YubiKey as the sudo authenticator via the pam_u2f module.
+
+---
+
 # YubiKey Sudo Setup Script
 
 A robust, production-ready Bash script for configuring Ubuntu 24.04 (Noble) to use YubiKey as the sudo authenticator via the pam_u2f module.
@@ -63,8 +74,19 @@ sudo ./setup-yubikey-sudo.sh --mode passwordless --no-cue --yes
 ## Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/jcoffi/yubikey-sudo-setup.git
+cd yubikey-sudo-setup
+
+# The script is already executable, just run it
+sudo ./setup-yubikey-sudo.sh
+```
+
+Or download directly:
+
+```bash
 # Download the script
-wget https://example.com/setup-yubikey-sudo.sh
+wget https://raw.githubusercontent.com/jcoffi/yubikey-sudo-setup/main/setup-yubikey-sudo.sh
 
 # Make executable
 chmod +x setup-yubikey-sudo.sh
